@@ -1,0 +1,41 @@
+> Bagaimana cara membeli aplikasi ini?
+- Pembelian bisa melalui link shopee toko kami atau bisa melalui kontak WhatsApp (08213456789) kami langsung
+
+> Apakah ada biaya langganan per-bulan?
+- Tidak ada, lisensi aplikasi berlaku seumur hidup
+
+> Apakah ada biaya lain selain harga beli aplikasi?
+- Tidak ada, harga sudah mencakup semua akses aplikasi, tidak ada biaya server atau domain karena aplikasi bersifat offline, tidak ada biaya bulanan atau tahunan
+
+> Apakah aplikasi bisa diakses melalui online?
+- Tidak bisa, karena aplikasi bersifat offline, tetapi dapat diakses oleh device lain dalam satu jaringan wifi/internet melalui IP adrress device dimana aplikasi diinstall
+- Cara akses terdapat pada menu Pengaturan Aplikasi -> Akses Jaringan Lokal
+
+> Lisensi bisa dipakai di berapa device?
+- 1 lisensi hanya berlaku untuk 1 device
+- Aktivasi lisensi wajib terkoneksi internet
+- Jika ingin pindah device perlu mencopot lisensi terlebih dahulu pada device yang lama melalui menu Pengaturan -> Lisensi
+
+> Bagaimana cara migrasi dari device lama ke device baru?
+- Unduh terlebih dahulu database dari device lama dan pindahkan file database ke device baru
+- Pastikan device lama terkoneksi internet lalu copot lisensi dari device lama melalui menu Pengaturan -> Lisensi
+- Pastikan device baru terkoneksi internet dan masukkan lisensi kembali pada device baru
+- Ke menu Pengaturan -> Backup & Data -> ke bagian Recover Database -> pilih database backup dari device lama -> Proses
+
+> Adakah tutorial cara pengoperasian aplikasi?
+- Ya ada, bisa diakses melalui kanal Youtube kami di sini: https://youtube....playlist
+
+> Apa spesifikasi minimum untuk aplikasi ini? 
+- Komputer dengan minimal RAM 4GB, dan sistem operasi Windows 10 ke atas
+
+> Apakah perlu training khusus secara offline?
+- Tidak perlu, aplikasi kami tergolong mudah dipahami dan dioperasikan; dan disediakan tutorial secara mendetail pada kanal Youtube kami di sini: https://youtube...playlist
+
+> Bagaimana cara membackup database secara manual?
+- Bisa melalui menu Pengaturan -> Backup & Data -> Download Database
+
+> Apa yang terjadi jika saya lupa membackup database?
+- Aplikasi akan membuat backup otomatis aplikasi saat pertama aplikasi dibuka dan setiap beberapa jam sekali (aplikasi harus aktif)
+
+> Apa yang terjadi jika saya kehilangan file database yang dibackup secara manual atau otomatis melalui aplikasi?
+- Jika terjadi hal tersebut maka tidak ada yang bisa dilakukan, semua data hilang dan tidak bisa direcover, dan ini termasuk human-error sehingga kami tidak bisa berbuat apa-apa
