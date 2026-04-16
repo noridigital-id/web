@@ -11,10 +11,10 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --primary: #f59e0b; --primary-dark: #d97706; --primary-darker: #92400e;
-      --primary-light: #fffbeb; --amber-200: #fde68a;
+      --primary: #3b82f6; --primary-dark: #2563eb; --primary-darker: #1e40af;
+      --primary-light: #eff6ff; --amber-200: #bfdbfe;
       --text: #111827; --text-2: #374151; --muted: #6b7280; --muted-2: #9ca3af;
-      --bg: #ffffff; --bg-alt: #f9fafb; --border: #e5e7eb; --border-light: #f3f4f6;
+      --bg: #ffffff; --bg-alt: #f8fbff; --border: #dbeafe; --border-light: #eff6ff;
       --green-bg: #d1fae5; --red-bg: #fee2e2;
       --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
       --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
@@ -73,7 +73,7 @@
     .btn-wa { background: #25d366; color: #fff; padding: 12px 22px; border-radius: 9px; font-weight: 700; font-size: 0.875rem; display: inline-flex; align-items: center; gap: 8px; transition: opacity 0.18s, transform 0.15s; }
     .btn-wa:hover { opacity: 0.9; transform: translateY(-1px); }
     .btn-demo { background: #fff; color: var(--primary-darker); padding: 12px 20px; border-radius: 9px; font-weight: 700; font-size: 0.85rem; border: 1.5px solid var(--amber-200); display: inline-flex; align-items: center; gap: 7px; transition: border-color 0.18s, transform 0.15s, box-shadow 0.18s; }
-    .btn-demo:hover { border-color: var(--primary); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(217,119,6,0.16); }
+    .btn-demo:hover { border-color: var(--primary); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(59,130,246,0.2); }
     .btn-lynk { background: #2db97f; color: #fff; padding: 12px 22px; border-radius: 9px; font-weight: 700; font-size: 0.875rem; display: inline-flex; align-items: center; gap: 8px; transition: opacity 0.18s, transform 0.15s, box-shadow 0.18s; }
     .btn-lynk:hover { opacity: 0.92; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(45,185,127,0.28); }
     .nav-links .nav-lynk { background: #2db97f; color: #fff !important; padding: 7px 16px; border-radius: 7px; margin-left: 6px; display: inline-flex; align-items: center; gap: 7px; }
@@ -81,9 +81,9 @@
     .lynk-icon-box { width: 18px; height: 18px; border-radius: 5px; background: rgba(255,255,255,0.94); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .lynk-icon { width: 12px; height: 12px; display: block; }
     .demo-section { padding: 14px 24px 6px; }
-    .demo-card { background: linear-gradient(135deg, #fff7ed 0%, #fffbeb 100%); border: 1px solid var(--amber-200); border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-    .demo-copy { font-size: 0.84rem; color: #7c2d12; line-height: 1.5; max-width: 690px; }
-    .demo-copy strong { color: #9a3412; }
+    .demo-card { background: linear-gradient(135deg, #f5f9ff 0%, #e9f1ff 100%); border: 1px solid var(--amber-200); border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .demo-copy { font-size: 0.84rem; color: #1e40af; line-height: 1.5; max-width: 690px; }
+    .demo-copy strong { color: #1e40af; }
     .demo-card .btn-demo { background: var(--primary); color: #fff; border-color: var(--primary); padding: 9px 14px; border-radius: 8px; font-size: 0.79rem; }
     .demo-card .btn-demo:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
     /* SECTIONS */
@@ -119,12 +119,29 @@
     .feat-group ul li { font-size: 0.83rem; color: var(--text-2); display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
     .fi-dot { width: 16px; height: 16px; background: var(--green-bg); border-radius: 50%; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; }
     .fi-dot svg { width: 8px; height: 8px; }
+    .feat-group-note { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border-light); font-size: 0.76rem; color: var(--primary-darker); font-weight: 600; }
     /* REQUIREMENTS */
     .req-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
     .req-card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 22px 20px; }
     .req-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--primary); margin-bottom: 8px; }
     .req-value { font-size: 0.875rem; color: var(--text); font-weight: 600; }
     .req-sub { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+    /* DEMO CTA */
+    .demo-cta-section { padding-top: 0; }
+    .demo-cta-card { position: relative; overflow: hidden; background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 46%, #93c5fd 100%); border-radius: 24px; padding: clamp(28px, 5vw, 42px); color: #fff; box-shadow: 0 22px 40px rgba(37, 99, 235, 0.2); }
+    .demo-cta-card::before { content: ''; position: absolute; inset: auto -10% -45% auto; width: 320px; height: 320px; border-radius: 50%; background: rgba(255,255,255,0.08); }
+    .demo-cta-card::after { content: ''; position: absolute; inset: -22% auto auto -8%; width: 220px; height: 220px; border-radius: 50%; background: rgba(255,255,255,0.08); }
+    .demo-cta-content { position: relative; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.8fr); gap: 28px; align-items: center; }
+    .demo-cta-text { max-width: 620px; }
+    .demo-cta-eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 999px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.18); font-size: 0.72rem; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; margin-bottom: 16px; }
+    .demo-cta-title { font-size: clamp(1.45rem, 3vw, 2.15rem); line-height: 1.15; letter-spacing: -0.9px; margin-bottom: 14px; }
+    .demo-cta-subtitle { font-size: 0.95rem; line-height: 1.8; color: rgba(239, 246, 255, 0.92); }
+    .demo-cta-points { list-style: none; display: grid; gap: 10px; margin-top: 20px; }
+    .demo-cta-points li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.86rem; line-height: 1.6; color: rgba(239, 246, 255, 0.96); }
+    .demo-cta-actions { position: relative; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.18); border-radius: 20px; padding: 22px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .demo-cta-actions p { font-size: 0.84rem; line-height: 1.7; color: rgba(239, 246, 255, 0.92); margin-bottom: 18px; }
+    .demo-cta-actions .btn-demo { width: 100%; justify-content: center; background: #fff; color: var(--primary-darker); border-color: rgba(255,255,255,0.9); box-shadow: 0 12px 20px rgba(30, 64, 175, 0.2); }
+    .demo-cta-actions .btn-demo:hover { background: #eff6ff; border-color: #e9f1ff; box-shadow: 0 16px 26px rgba(30, 64, 175, 0.25); }
     /* FAQ */
     .faq-list { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; gap: 7px; }
     .faq-item { border: 1px solid var(--border); border-radius: 11px; overflow: hidden; background: #fff; }
@@ -139,7 +156,7 @@
     .faq-body ul { padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
     .faq-body a { color: var(--primary-dark); text-decoration: underline; text-underline-offset: 2px; }
     /* CTA */
-    .cta-section { background: #111827; padding: clamp(64px,9vw,100px) 24px; text-align: center; }
+    .cta-section { background: linear-gradient(180deg, #0f172a 0%, #111827 100%); padding: clamp(64px,9vw,100px) 24px; text-align: center; }
     .cta-inner { max-width: 560px; margin: 0 auto; }
     .cta-title { font-size: clamp(1.6rem,4vw,2.3rem); font-weight: 800; color: #fff; letter-spacing: -1px; margin-bottom: 16px; line-height: 1.15; }
     .cta-title em { color: var(--primary); font-style: normal; }
@@ -161,7 +178,7 @@
     .fi { width: 16px; height: 16px; flex-shrink: 0; }
     .footer-bottom { border-top: 1px solid var(--border); text-align: center; padding: 18px 24px; font-size: 0.77rem; color: var(--muted-2); }
     /* RESPONSIVE */
-    @media (max-width: 860px) { .app-hero-inner { grid-template-columns: 1fr; } .app-hero-cover { order: -1; } .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; } }
+    @media (max-width: 860px) { .app-hero-inner { grid-template-columns: 1fr; } .app-hero-cover { order: -1; } .demo-cta-content { grid-template-columns: 1fr; } .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; } }
     @media (max-width: 768px) {
       .nav-links { display: none; flex-direction: column; position: absolute; top: 62px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--border); padding: 14px 20px; gap: 3px; box-shadow: var(--shadow-lg); z-index: 199; }
       .nav-links.open { display: flex; }
@@ -169,7 +186,7 @@
       .nav-links.open a { width: 100%; display: block; padding: 11px 14px; }
       .nav-hamburger { display: flex; }
     }
-    @media (max-width: 600px) { .feat-groups { grid-template-columns: 1fr; } .footer-inner { grid-template-columns: 1fr; gap: 28px; } .req-grid { grid-template-columns: 1fr 1fr; } .demo-section { padding: 12px 16px 4px; } .demo-card { padding: 11px 12px; } .demo-copy { font-size: 0.81rem; } .screenshots-scroll { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .feat-groups { grid-template-columns: 1fr; } .footer-inner { grid-template-columns: 1fr; gap: 28px; } .req-grid { grid-template-columns: 1fr 1fr; } .demo-section { padding: 12px 16px 4px; } .demo-card { padding: 11px 12px; } .demo-copy { font-size: 0.81rem; } .demo-cta-card { border-radius: 18px; padding: 24px 20px; } .demo-cta-actions { padding: 18px; } .screenshots-scroll { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -258,6 +275,7 @@
         </a>
       </div>
     </div>
+
   </section>
 
   <!-- SCREENSHOTS -->
@@ -297,43 +315,67 @@
       <div class="feat-groups">
         <div class="feat-group fade-up">
           <div class="feat-group-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-          <div class="feat-group-title">Transaksi Penjualan</div>
+          <div class="feat-group-title">Kasir &amp; Penjualan</div>
           <ul>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Transaksi penjualan harian</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Cetak struk transaksi</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Multiple metode pembayaran</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pencarian obat cepat</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Transaksi penjualan harian</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Point of Sales</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Cetak struk transaksi</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Cetak struk penjualan</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Multiple metode pembayaran</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pencarian obat cepat</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Diskon per-obat dan per-transaksi</li>
           </ul>
+          <div class="feat-group-note">Mendukung alur kasir yang cepat untuk apotek retail harian.</div>
         </div>
         <div class="feat-group fade-up fade-up-d1">
-          <div class="feat-group-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h.01M11 8h.01M15 8h.01"/></svg></div>
-          <div class="feat-group-title">Manajemen Stok &amp; Obat</div>
+          <div class="feat-group-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div>
+          <div class="feat-group-title">Stok, Batch &amp; Penyimpanan</div>
           <ul>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Database obat lengkap</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Notifikasi stok menipis</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pelacakan kadaluarsa obat</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Satuan konversi penjualan</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Dashboard pengingat stok obat</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pelacakan kadaluarsa obat</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Konversi dan harga jual satuan penjualan</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Sistem penjualan FEFO, FIFO dan Manual</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Stok opname</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pengaturan lokasi penyimpanan</li>
           </ul>
+          <div class="feat-group-note">Memudahkan kontrol stok per batch agar obat terjual dengan urutan yang tepat.</div>
         </div>
         <div class="feat-group fade-up fade-up-d2">
           <div class="feat-group-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
           <div class="feat-group-title">Laporan &amp; Analitik</div>
           <ul>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Laporan penjualan harian</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Laporan laba rugi</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Rekap pembelian barang</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Export laporan ke Excel</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Laporan penjualan obat</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Laporan laba rugi</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Laporan arus kas</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Laporan performa obat</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Rekap pembelian barang</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Import/Export Excel</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Export data ke PDF atau Excel</li>
           </ul>
+          <div class="feat-group-note">Ringkasan operasional dan keuangan tersedia siap cetak dan siap analisa.</div>
         </div>
         <div class="feat-group fade-up fade-up-d3">
-          <div class="feat-group-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 18.66l-1.41 1.41M12 2v2M12 20v2M4.93 4.93l1.41 1.41M18.66 18.66l1.41 1.41M2 12h2M20 12h2"/></svg></div>
-          <div class="feat-group-title">Sistem &amp; Keamanan</div>
+          <div class="feat-group-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div class="feat-group-title">Administrasi &amp; Pengaturan</div>
           <ul>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Akses jaringan lokal (LAN)</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Backup &amp; restore database</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Manajemen multi-pengguna</li>
-            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pengaturan profil apotek</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Akses jaringan lokal (LAN)</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Backup &amp; restore database</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Manajemen multi-role dan multi-pengguna</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pengaturan profil apotek</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pengaturan PPN</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pengaturan printer</li>
           </ul>
+          <div class="feat-group-note">Siap dipakai di satu perangkat maupun operasional apotek dengan beberapa pengguna.</div>
+        </div>
+        <div class="feat-group fade-up">
+          <div class="feat-group-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M3 16v5h5"/><path d="M21 16v5h-5"/><path d="M8 8h8v8H8z"/></svg></div>
+          <div class="feat-group-title">Pembelian &amp; Operasional Tim</div>
+          <ul>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pembelian obat secara kredit/hutang</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Manajemen shift dan absensi staff</li>
+            <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Retur penjualan dan pembelian</li>
+          </ul>
+          <div class="feat-group-note">Cocok untuk apotek yang perlu kontrol pembelian, hutang, dan operasional staf.</div>
         </div>
       </div>
     </div>
@@ -353,7 +395,36 @@
         <div class="req-card"><div class="req-label">Storage</div><div class="req-value">100 GB</div><div class="req-sub">lebih besar direkomendasikan</div></div>
         <div class="req-card"><div class="req-label">Internet</div><div class="req-value">Hanya aktivasi</div><div class="req-sub">Setelahnya offline penuh</div></div>
         <!-- <div class="req-card"><div class="req-label">Layar</div><div class="req-value">Min. 1024&times;768</div><div class="req-sub">1920&times;1080 optimal</div></div> -->
-        <div class="req-card"><div class="req-label">Jaringan LAN</div><div class="req-value">Opsional</div><div class="req-sub">Untuk akses multi-perangkat</div></div>
+        <!-- <div class="req-card"><div class="req-label">Jaringan LAN</div><div class="req-value">Opsional</div><div class="req-sub">Untuk akses multi-perangkat</div></div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO CTA -->
+  <section id="demo" class="section demo-cta-section" style="margin-top:100px;">
+    <div class="section-inner">
+      <div class="demo-cta-card fade-up">
+        <div class="demo-cta-content">
+          <div class="demo-cta-text">
+            <div class="demo-cta-eyebrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Live Demo
+            </div>
+            <h2 class="demo-cta-title">Kurang yakin? Bisa coba demonya dulu</h2>
+            <p class="demo-cta-subtitle">Lihat sendiri bagaimana Nori Apotek menangani transaksi, stok obat, dan laporan harian. Dengan live demo kamu bisa dengan mudah mengambil keputusan tanpa harus menebak-nebak alur aplikasinya.</p>
+            <ul class="demo-cta-points">
+              <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Cocok untuk melihat alur aplikasi secara langsung</li>
+              <li><span class="fi-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Bantu menilai kemudahan penggunaan sebelum membeli lisensi</li>
+            </ul>
+          </div>
+          <div class="demo-cta-actions">
+            <p>Tekan tombol di bawah untuk mencoba aplikasi secara live.</p>
+            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20coba%20demo%20aplikasi%20Nori%20Apotek" target="_blank" rel="noopener" class="btn-demo">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Coba Demo Sekarang
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
