@@ -1,0 +1,34 @@
+# Pada bagian "FITUR LENGKAP Semua yang Anda Butuhkan" pada halaman detail produk Apotek, buat ualng dengan fitur-fitur berikut ini, kategorikan ke beberapa kategori:
+- Dashboard pengingat stok obat
+- Pelacakan kadaluarsa obat
+- Konversi dan harga jual satuan penjualan
+- Sistem penjualan FEFO, FIFO dan Manual
+- Transaksi penjualan harian
+- Cetak struk transaksi
+- Multiple metode pembayaran
+- Pencarian obat cepat
+- Laporan penjualan obat
+- Laporan laba rugi
+- Laporan arus kas
+- Laporan performa obat
+- Rekap pembelian barang
+- Akses jaringan lokal (LAN)
+- Backup & restore database
+- Manajemen multi-role dan multi-pengguna
+- Pengaturan profil apotek
+- Manajemen shift dan absensi staff
+- Stok opname
+- Point of Sales
+- Pembelian obat secara kredit/hutang
+- Retur penjualan dan pembelian
+- Pengaturan PPN
+- Pengaturan printer
+- Import/Export Excel
+- Export data ke PDF atau Excel
+- Pengaturan lokasi penyimpanan
+- Diskon per-obat dan per-transaksi
+- Cetak struk penjualan
+
+# Untuk halaman produk Apotek, buat warna temanya hijau dan putih, tapi untuk halaman utamanya biarkan saja seperti sekarang
+
+# Tepat di atas section FAQ, tambah section baru seperti "Kurang yakin? Bisa coba demonya dulu" tambah button untuk ke link demonya, buat section ini mudah terbaca dan memikat visitor
