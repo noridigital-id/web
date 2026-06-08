@@ -76,6 +76,10 @@
     .btn-demo:hover { border-color: var(--primary); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(59,130,246,0.2); }
     .btn-lynk { background: #2db97f; color: #fff; padding: 12px 22px; border-radius: 9px; font-weight: 700; font-size: 0.875rem; display: inline-flex; align-items: center; gap: 8px; transition: opacity 0.18s, transform 0.15s, box-shadow 0.18s; }
     .btn-lynk:hover { opacity: 0.92; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(45,185,127,0.28); }
+    .btn-download { background: linear-gradient(135deg, #10b981, #34d399); color: #fff; padding: 12px 22px; border-radius: 9px; font-weight: 700; font-size: 0.875rem; display: inline-flex; align-items: center; gap: 8px; border: none; transition: transform 0.15s, box-shadow 0.18s; position: relative; overflow: hidden; box-shadow: 0 4px 14px rgba(16,185,129,0.35); }
+    .btn-download:hover { background: linear-gradient(135deg, #059669, #10b981); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(16,185,129,0.45); }
+    .btn-download::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.12) 50%, transparent 70%); transform: translateX(-100%); transition: transform 0.4s; }
+    .btn-download:hover::after { transform: translateX(100%); }
     .nav-links .nav-lynk { background: #2db97f; color: #fff !important; padding: 7px 16px; border-radius: 7px; margin-left: 6px; display: inline-flex; align-items: center; gap: 7px; }
     .nav-links .nav-lynk:hover { background: #239767 !important; }
     .lynk-icon-box { width: 18px; height: 18px; border-radius: 5px; background: rgba(255,255,255,0.94); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -84,8 +88,8 @@
     .demo-card { background: linear-gradient(135deg, #f5f9ff 0%, #e9f1ff 100%); border: 1px solid var(--amber-200); border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
     .demo-copy { font-size: 0.84rem; color: #1e40af; line-height: 1.5; max-width: 690px; }
     .demo-copy strong { color: #1e40af; }
-    .demo-card .btn-demo { background: var(--primary); color: #fff; border-color: var(--primary); padding: 9px 14px; border-radius: 8px; font-size: 0.79rem; }
-    .demo-card .btn-demo:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+    .demo-card .btn-download { padding: 14px 22px; font-size: 0.92rem; border-radius: 9px; }
+    .demo-card .btn-download:hover { box-shadow: 0 8px 20px rgba(37,99,235,0.4); }
     /* SECTIONS */
     .section { padding: clamp(56px,8vw,96px) 24px; }
     .section-alt { background: var(--bg-alt); }
@@ -140,8 +144,8 @@
     .demo-cta-points li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.86rem; line-height: 1.6; color: rgba(239, 246, 255, 0.96); }
     .demo-cta-actions { position: relative; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.18); border-radius: 20px; padding: 22px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
     .demo-cta-actions p { font-size: 0.84rem; line-height: 1.7; color: rgba(239, 246, 255, 0.92); margin-bottom: 18px; }
-    .demo-cta-actions .btn-demo { width: 100%; justify-content: center; background: #fff; color: var(--primary-darker); border-color: rgba(255,255,255,0.9); box-shadow: 0 12px 20px rgba(30, 64, 175, 0.2); }
-    .demo-cta-actions .btn-demo:hover { background: #eff6ff; border-color: #e9f1ff; box-shadow: 0 16px 26px rgba(30, 64, 175, 0.25); }
+    .demo-cta-actions .btn-download { width: 100%; justify-content: center; box-shadow: 0 12px 24px rgba(37, 99, 235, 0.35); font-size: 0.92rem; padding: 14px 22px; }
+    .demo-cta-actions .btn-download:hover { box-shadow: 0 16px 32px rgba(37, 99, 235, 0.5); transform: translateY(-2px); }
     /* FAQ */
     .faq-list { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; gap: 7px; }
     .faq-item { border: 1px solid var(--border); border-radius: 11px; overflow: hidden; background: #fff; }
@@ -269,9 +273,9 @@
     <div class="section-inner" style="margin-top: 25px;">
       <div class="demo-card fade-up">
         <p class="demo-copy"><strong>Kurang yakin?</strong> Bisa coba dulu di sini, cek demonya sebelum beli.</p>
-        <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20coba%20demo%20aplikasi%20Nori%20Apotek" target="_blank" rel="noopener" class="btn-demo">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          Coba Demo
+        <a href="apotek-demo.exe" class="btn-download">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Demo
         </a>
       </div>
     </div>
@@ -407,8 +411,8 @@
         <div class="demo-cta-content">
           <div class="demo-cta-text">
             <div class="demo-cta-eyebrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              Live Demo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Demo
             </div>
             <h2 class="demo-cta-title">Kurang yakin? Bisa coba demonya dulu</h2>
             <p class="demo-cta-subtitle">Lihat sendiri bagaimana Nori Apotek menangani transaksi, stok obat, dan laporan harian. Dengan live demo kamu bisa dengan mudah mengambil keputusan tanpa harus menebak-nebak alur aplikasinya.</p>
@@ -419,9 +423,9 @@
           </div>
           <div class="demo-cta-actions">
             <p>Tekan tombol di bawah untuk mencoba aplikasi secara live.</p>
-            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20coba%20demo%20aplikasi%20Nori%20Apotek" target="_blank" rel="noopener" class="btn-demo">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              Coba Demo Sekarang
+            <a href="apotek-demo.exe" class="btn-download">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Demo
             </a>
           </div>
         </div>
